@@ -26,16 +26,22 @@
                                 <rect key="frame" x="17" y="177" width="341" height="489"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZN-OM-heB">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZN-OM-heB">
                                 <rect key="frame" x="17" y="28" width="68" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="68" id="Su9-F2-35B"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="back"/>
+                                <connections>
+                                    <action selector="backButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fwQ-Vh-bpn"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y1G-Ok-RFi">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y1G-Ok-RFi">
                                 <rect key="frame" x="290" y="28" width="68" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="forward"/>
+                                <connections>
+                                    <action selector="forwardButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KXA-g8-sgQ"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8A9-Rj-Pzx">
                                 <rect key="frame" x="93" y="29" width="189" height="30"/>
@@ -61,6 +67,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="sZN-OM-heB" id="XOX-kW-KVM"/>
+                        <outlet property="forwardButton" destination="W9A-zw-2h1" id="RX4-oe-rCU"/>
+                        <outlet property="urlTextField" destination="8A9-Rj-Pzx" id="cWH-JN-Sdb"/>
                         <outlet property="webView" destination="fhW-5G-fgh" id="B4k-hV-Zfo"/>
                     </connections>
                 </viewController>
